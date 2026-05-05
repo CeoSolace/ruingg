@@ -1,0 +1,124 @@
+/* Base styles shared across the entire application.
+   The site uses a dark theme with accent colours defined as CSS variables.
+   Feel free to tweak the spacing, font sizes or colours to suit your taste. */
+
+/* Define CSS variables for easy theming */
+:root {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --muted: #a5a5a5;
+  --accent: #7045ff;
+  --accent-hover: #8465ff;
+  --border-radius: 0.5rem;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100%;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Utility classes for layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Status badge styles */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.badge-live {
+  background-color: #008c5e;
+  color: #fff;
+}
+.badge-community {
+  background-color: #0057b7;
+  color: #fff;
+}
+.badge-rebuilding {
+  background-color: #a83279;
+  color: #fff;
+}
+
+/* Card styling */
+.card {
+  background-color: #161616;
+  border: 1px solid #222;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.button:hover {
+  background-color: var(--accent-hover);
+}
+
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid #222;
+  margin-top: 4rem;
+  color: var(--muted);
+}
