@@ -1,34 +1,43 @@
-// Metadata for About page
 export const metadata = {
   title: 'Ruin Network | About',
-  description: 'Learn about the vision and mission behind Ruin Network.'
+  description: 'Learn about the mission behind Ruin Network.'
 };
 
-/**
- * About page describing the vision and mission of the Ruin Network.
- * Explains the overarching goal of creating an interconnected
- * ecosystem of tools, platforms and communities.
- */
 export default function AboutPage() {
   return (
-    <main className="container" style={{ marginTop: '4rem', maxWidth: '60rem' }}>
-      <h1>About Ruin Network</h1>
-      <p style={{ marginTop: '1rem', lineHeight: 1.6, color: 'var(--muted)' }}>
-        Ruin Network exists to empower digital communities by providing
-        robust tools, platforms and infrastructure. We believe in
-        challenging outdated systems and building innovative solutions
-        that connect people in meaningful ways. By integrating our
-        suite of products under one network, we make it easy for
-        creators, gamers and community leaders to grow and manage
-        their audiences.
-      </p>
-      <p style={{ marginTop: '1rem', lineHeight: 1.6, color: 'var(--muted)' }}>
-        Our mission is simple: disrupt the status quo and pave the
-        way for next‑generation community experiences. Whether you
-        are managing a Discord server with Bright, sharing your
-        personal brand on BioLinkHQ or collaborating on our SMP,
-        Ruin Network provides the foundation you need to succeed.
-      </p>
+    <main className="container">
+      <section className="page-heading">
+        <h1 className="page-title">
+          Built to <span className="gradient-text">replace outdated systems.</span>
+        </h1>
+
+        <p className="page-copy">
+          Ruin Network exists to build modern infrastructure for online
+          communities, creators and digital ecosystems.
+        </p>
+      </section>
+
+      <section className="content-panel">
+        <p>
+          The goal behind Ruin Network is simple: challenge outdated
+          community platforms and create a connected ecosystem where
+          tools, infrastructure and communities work together.
+        </p>
+
+        <p>
+          From automation platforms like Bright to social ecosystems like
+          BioLinkHQ and community projects like CivCore SMP, every
+          product inside the network is built around engagement,
+          scalability and long‑term growth.
+        </p>
+
+        <p>
+          Ruin Network combines startup technology culture with the speed
+          and competitiveness of gaming communities. The result is a
+          sharper, faster and more connected experience for modern online
+          groups.
+        </p>
+      </section>
     </main>
   );
 }
